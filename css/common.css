@@ -1,0 +1,245 @@
+/* ==========================================================================
+   1. ШРИФТЫ
+   ========================================================================== */
+@font-face {
+    font-family: 'Evolventa';
+    src: url('../fonts/Evolventa-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Evolventa';
+    src: url('../fonts/Evolventa-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Involve';
+    src: url('../fonts/Involve-Regular-BF65bb0f66a3dc1.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Involve';
+    src: url('../fonts/Involve-Bold-BF65bb0f66f270b.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   2. БАЗОВЫЕ СТИЛИ СТРАНИЦЫ И СЕТКА
+   ========================================================================== */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: #f3e0cf;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   3. ШАПКА САЙТА (HEADER & NAV)
+   ========================================================================== */
+header {
+    background-color: #634731;
+    width: 100%;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    list-style: none;
+    margin: 0;
+    padding: 1px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 19px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1;
+    display: inline-block;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+nav a[aria-current="page"] {
+    color: #bbbaba; 
+    font-weight: bold; 
+}
+
+nav a[aria-current="page"]:hover {
+    opacity: 1; 
+    cursor: default;
+}
+
+/* ==========================================================================
+   4. КОНТАКТЫ
+   ========================================================================== */
+   
+/* Общая секция контактов */
+.contacts-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+}
+    
+/* Левый блок с текстом контактов */
+.contacts-info{
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+.contacts-info {
+    width: 55%;
+}
+
+.contacts-info h2 {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.contacts-info p {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+/* Правый блок, содержащий форму */
+.contacts-form {
+    width: 40%;
+}
+
+.contacts-form h2 {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Коричневая подложка формы */
+.feedback-form {
+    background-color: #634731;      
+    padding: 20px;
+    border-radius: 25px;
+    width: 100%;
+}
+
+/* Оболочка для каждой строки */
+.form-group {
+    display: flex;
+    align-items: center;            /* Центрирует плашку и инпут по вертикали */
+    gap: 10px;
+    margin-bottom: 15px;            /* Расстояние между строками */
+}
+
+/* Серые плашки с надписями слева */
+.form-label {
+    background-color: #ffffff;      /* Светло-серый цвет фона */
+    color: #000000;                 /* Темный цвет текста */
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 15px;             /* Внутренние отступы внутри плашки */
+    border-radius: 10px;            /* Скругление углов */
+    width: 180px;                   /* ФИКСИРОВАННАЯ ШИРИНА: чтобы все плашки были строго одного размера */
+    text-align: center;             /* Центрируем текст внутри плашки */
+    box-sizing: border-box;
+}
+
+/* Белые поля ввода справа */
+.form-input {
+    flex-grow: 1;                   /* Заставляет поле растягиваться на всю оставшуюся ширину */
+    background-color: #ffffff;      /* Чуть более контрастный цвет для поля */
+    border: none;                   /* Убираем стандартную рамку браузера */
+    outline: none;                  /* Убираем рамку при клике */
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 15px;             /* Высота и отступы как у плашки, чтобы они совпадали */
+    border-radius: 10px;
+    color: #333333;
+    box-sizing: border-box;
+}
+
+/* Контейнер для кнопки */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;      /* Смещает кнопку в правый край */
+    margin-top: 20px;
+}
+
+/* Сама кнопка отправки */
+.submit-btn {
+    background-color: #8c6a4f;
+    color: #ffffff;
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 16px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Эффект при наведении на кнопку */
+.submit-btn:hover {
+    background-color: #a17d60;      /* Делает кнопку еще чуть ярче при наведении */
+}
+/* ==========================================================================
+   5. ПОДВАЛ САЙТА (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: #444444; 
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    color: #ffffff;            
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+    margin: 0;
+    line-height: 1;
+}

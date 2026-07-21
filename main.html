@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main - Detective agency</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/slider.js"></script>
+    <script src="js/mask.js"></script>
+</head>
+<body>
+    <header>
+        <nav aria-label="Main menu">
+            <ul>
+                <li><a href="main.html" aria-current="page">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <main>
+            <!-- Slider -->
+            <div class="slider-wrapper">
+                <div class="container slider-content-grid">
+                    <div class="slider-static-content">
+                        <h2>PRIVATE DETECTIVE AGENCY "SLEDSTVIE VELI" PROVIDING SERVICES SINCE 2007</h2>
+                        <p>Our agency employs licensed private investigators with extensive background in law enforcement and operational fields, delivering high-quality intelligence and investigative services for years.</p>
+                        <p>Over the years, we have accumulated vast experience and specialized skills that allow us to resolve any issues you bring to us efficiently and promptly.</p>
+                    </div>
+                </div>
+
+                <div class="slider">
+                    <div class="slide active"><img src="images/main/slide1.jpg" alt="Расследования"></div>
+                    <div class="slide"><img src="images/main/slide2.jpg" alt="Поиск информации"></div>
+                    <div class="slide"><img src="images/main/slide3.jpg" alt="Техническая экспертиза"></div>
+                </div>
+
+                <!-- Slider buttons -->
+                <button class="slider-btn prev-btn" aria-label="Предыдущий слайд">❮</button>
+                <button class="slider-btn next-btn" aria-label="Следующий слайд">❯</button>
+                
+            </div>
+            
+            <!-- Contacts section -->
+            <div class="container">
+                <section class="contacts-section">
+                    <div class="contacts-info">
+                        <h2>Our contacts</h2>
+                        <p><strong>Address: </strong>5A Leskova St, Moscow, Russia</p>
+                        <p><strong>Phone: </strong>+7 (925) 387-27-86</p>
+                        <p><strong>E-mail: </strong>priem@sledstvie-veli.agency</p>
+                    </div>
+                    <div class="contacts-form">
+                        <h2>Leave your contact details</h2>
+                        <form class="feedback-form js-form">
+                            <div class="form-group">
+                                <label for="user-fio" class="form-label">Full name:</label>
+                                <input type="text" id="user-fio" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="user-email" class="form-label">Email address:</label>
+                                <input type="email" id="user-email" name="email" class="form-input" required placeholder="email@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="user-phone" class="form-label">Phone number:</label>
+                                <input type="tel" id="user-phone" name="phone" class="form-input" required>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="submit-btn">Send contacts</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+
+    <footer>
+        <p>© "Sledstvie Veli" Detective Agency | 2007-2026 | All rights reserved</p>
+    </footer>
+</body>
+</html>

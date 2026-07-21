@@ -1,0 +1,108 @@
+/* ==========================================================================
+   1. СЕТКА И КОНТЕЙНЕР ОТЗЫВОВ
+   ========================================================================== */
+.reviews-section {
+    max-width: 966px; /* Зажимаем отзывы в тот же аккуратный коридор, что и карточки услуг */
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.reviews-title {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 40px;
+    padding-left: 30px; /* Соосность по левому краю с карточками */
+}
+
+/* Вертикальный список */
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Расстояние между отзывами */
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+/* ==========================================================================
+   2. ДИЗАЙН ПЛИТКИ ОТЗЫВА
+   ========================================================================== */
+.review-item {
+    background-color: #ffffff; /* Белая аккуратная плашка */
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(99, 71, 49, 0.04); /* Мягкая фирменная тень */
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Интерактивный эффект */
+.review-item:hover {
+    transform: translateX(4px); /* При наведении карточка чуть смещается вправо */
+    box-shadow: 0 10px 30px rgba(99, 71, 49, 0.08);
+}
+
+/* Строка с именем и звездами */
+.review-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Зазор между именем и рейтингом */
+    margin-bottom: 12px;
+}
+
+.client-name {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #634731; /* Наш фирменный коричневый цвет */
+    margin: 0;
+}
+
+/* Золотые звёзды рейтинга */
+.rating-stars {
+    color: #ffc107; /* Красивый золотой цвет */
+    font-size: 18px;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+/* Текст отзыва */
+.review-text {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0;
+}
+
+/* ==========================================================================
+   3. ЛОКАЛЬНОЕ ВЫРАВНИВАНИЕ КОНТАКТОВ НА ЭТОЙ СТРАНИЦЕ
+   ========================================================================== */
+/* Локальное выравнивание контактов на странице отзывов */
+.reviews-contacts {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    max-width: 966px !important; /* ИСПРАВЛЕНО: жестко зажимаем блок под ширину отзывов */
+    margin: 40px auto 60px auto !important; /* Центрируем всю секцию по оси сайта */
+    padding: 0 !important;
+    gap: 40px !important;
+}
+
+/* Выравнивание левой колонки с текстом */
+.reviews-contacts .contacts-info {
+    width: 45% !important;
+    padding-left: 15px !important; /* Небольшой отступ, чтобы текст встал ровно под буквы отзывов */
+}
+
+/* Выравнивание правой колонки с формой */
+.reviews-contacts .contacts-form {
+    width: auto !important;
+}
+
+.reviews-contacts .feedback-form {
+    width: 480px !important;
+}

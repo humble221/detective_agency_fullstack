@@ -1,0 +1,179 @@
+/* Локальное выравнивание секции контактов на странице О нас */
+.about-contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1300px;
+    margin: 40px auto 60px auto;
+    padding: 0;
+}
+
+.about-contacts .contacts-info {
+    width: 45%;
+    padding-left: 0;
+    margin-left: -30px;
+}
+
+.about-contacts .contacts-form {
+    width: 40%;
+    margin-right: 10px;
+}
+
+
+
+/* ==========================================================================
+   1. КОМПОНЕНТ: ВЕРХНИЙ БАННЕР С КАРТИНКОЙ
+   ========================================================================== */
+.about-banner {
+    position: relative;
+    width: 100%;
+    height: 320px; /* Аккуратная высота баннера */
+    background-image: url('../images/about/about-banner.jpg'); /* Имя вашей картинки в папке images */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Центрируем заголовок по вертикали внутри баннера */
+    margin-bottom: 50px;
+}
+
+/* Наложение 50% затемнения на картинку баннера */
+.about-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% прозрачности */
+    z-index: 1;
+}
+
+/* Заголовок внутри баннера */
+.banner-title {
+    position: relative;
+    z-index: 2; /* Поднимаем над темной плашкой */
+    color: #ffffff;
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    padding-left: 20px; /* Выравнивание первой буквы строго по сетке сайта */
+}
+
+/* ==========================================================================
+   2. ОБЩИЕ ЗАГОЛОВКИ И ВВОДНЫЙ ТЕКСТ
+   ========================================================================== */
+.section-title {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 30px;
+    padding-left: 20px; /* Выравнивание по левому краю */
+}
+
+.about-intro {
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.lead-text {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #000000;
+    margin: 0;
+}
+
+/* ==========================================================================
+   3. СЕТКА: ПОЧЕМУ ВЫБИРАЮТ НАС (3 в ряд)
+   ========================================================================== */
+.about-features {
+    margin-bottom: 60px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 равные колонки */
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(99, 71, 49, 0.04); /* Легкая тень */
+    box-sizing: border-box;
+}
+
+.feature-card h3 {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #634731; /* Наш фирменный коричневый цвет */
+    margin: 0 0 12px 0;
+}
+
+.feature-card p {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    margin: 0;
+}
+
+/* ==========================================================================
+   4. СЕТКА: НАШИ ЦЕННОСТИ (4 в ряд)
+   ========================================================================== */
+.about-values {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    color: #000000;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 ценности в один ряд */
+    gap: 20px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.value-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 3px solid #634731; /* Стильная коричневая полоса слева карточки */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+}
+
+.value-item h4 {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #634731;
+    margin: 0 0 8px 0;
+}
+
+.value-item p {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000000;
+    margin: 0;
+}
+
+.summary-text {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+    padding: 0 20px;
+    margin: 0;
+}

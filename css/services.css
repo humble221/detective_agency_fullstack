@@ -1,0 +1,108 @@
+/* ==========================================================================
+   1. СЕТКА ДЛЯ КАРТОЧЕК
+   ========================================================================== */
+.services-section {
+    max-width: 966px;   /* Ширина всей вашей сетки (3 карточки + гэпы) */
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Главный заголовок страницы */
+.services-title {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 auto 60px auto;
+    padding-left: 5px;
+}
+
+/* Контейнер сетки */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ровно 3 равные колонки */
+    gap: 50px 10px; /* 50px — отступ между рядами, 30px — между колонками */
+    width: 100%;
+    margin-bottom: 60px; /* Отступ снизу до блока контактов */
+
+    justify-content: center; /* Центрирует сами колонки по горизонтали внутри экрана */
+    justify-items: start;    /* Гарантирует, что карточки внутри колонок прижмутся к левому краю */
+}
+
+/* ==========================================================================
+   2. СТИЛИЗАЦИЯ КАРТОЧКИ
+   ========================================================================== */
+.service-card {
+    display: flex;
+    flex-direction: column; /* Выстраиваем элементы внутри карточки вертикально */
+    align-items: flex-start; /* Прижимаем тексты и кнопки к левому краю */
+    width: 100%;
+
+    background-color: #ffffff;      /* Чистый белый фон для самой карточки */
+    padding: 15px;                  /* Внутренние отступы, чтобы контент не лип к краям плитки */
+    border-radius: 16px;            /* Красивое скругление углов плитки */
+    box-shadow: 0 10px 30px rgba(99, 71, 49, 0.06); /* Мягкая, едва заметная коричневатая тень */
+    box-sizing: border-box;         /* Чтобы padding не раздувал карточку */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавность для эффекта при наведении */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Приподнимаем карточку вверх на 5 пикселей */
+    box-shadow: 0 15px 35px rgba(99, 71, 49, 0.12); /* Делаем тень более выразительной */
+}
+
+/* Изображение в карточке */
+.service-img {
+    width: 292px;
+    height: 292px; /* Фиксированная высота для всех фото, чтобы они были одинаковыми */
+    object-fit: cover; /* Фото заполняет блок без искажений */
+    margin-bottom: 8px; /* Отступ от фото до названия */
+}
+
+/* Название услуги */
+.service-name {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #000000;
+    margin: 0 0 4px 0; /* Обнуляем встроенные отступы браузера и даем 8px вниз */
+    line-height: 1.3;
+}
+
+/* Цена услуги */
+.service-price {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #272727; /* Чуть более мягкий цвет для цены */
+    margin: 0 0 10px 0; /* Отступ 15px вниз до кнопки */
+    line-height: 1;
+}
+
+/* ==========================================================================
+   3. КНОПКА "ПОДРОБНЕЕ" (ИЗ МАКЕТА)
+   ========================================================================== */
+.more-btn {
+    display: inline-block;
+    background-color: #634731; /* Коричневый цвет из вашего дизайна */
+    color: #ffffff; /* Белый текст */
+    text-decoration: none; /* Убираем стандартное подчеркивание ссылки */
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 30px; /* Внутренние подушки: 10px сверху/снизу, 30px по бокам */
+    border-radius: 10px; /* Аккуратное скругление углов, как на фото */
+    transition: background-color 0.3s, opacity 0.2s;
+    line-height: 1;
+}
+
+/* Эффект при наведении на кнопку */
+.more-btn:hover {
+    background-color: #4d3624; /* Кнопка становится чуть темнее при наведении */
+    cursor: pointer;
+}
+
+/* Эффект при клике */
+.more-btn:active {
+    transform: scale(0.98); /* Легкое визуальное нажатие */
+}

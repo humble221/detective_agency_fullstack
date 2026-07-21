@@ -1,0 +1,122 @@
+/* ==========================================================================
+   1. КОМПОНЕНТ: СЛАЙДЕР
+   ========================================================================== */
+/* Оболочка всего слайдера */
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.slider-content-grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Ограничитель высоты слайдов */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+/* Базовые стили для отдельного слайда */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Слайд становится видимым только при наличии класса .active */
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Стили изображения */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(50%);
+}
+
+/* Статичный контент поверх ВСЕГО слайдера */
+.slider-static-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    width: 100%;
+    max-width: 850px;
+    text-align: left;
+    color: #ffffff;
+    font-family: 'Evolventa', Arial, sans-serif;
+}
+
+/* Заголовок из Figma */
+.slider-static-content h2 {
+    font-size: 36px; 
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 35px;
+    letter-spacing: 0.5px;
+}
+
+/* Абзацы текста из Figma */
+.slider-static-content p {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    opacity: 0.95;
+}
+
+.slider-static-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Кнопки-стрелки управления */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    border: none;
+    font-size: 24px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    border-radius: 4px;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.slider-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }

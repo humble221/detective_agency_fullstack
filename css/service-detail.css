@@ -1,0 +1,195 @@
+/* ==========================================================================
+   1. ОБЩАЯ СТРУКТУРА СТРАНИЦЫ ПОДРОБНОСТЕЙ
+   ========================================================================== */
+.detail-section {
+    max-width: 1000px; /* Наш фирменный коридор выравнивания */
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.detail-title {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 40px;
+    padding-left: 15px;
+}
+
+.content-block {
+    margin-bottom: 50px;
+}
+
+.content-block h2 {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 25px;
+    padding-left: 15px;
+}
+
+/* ==========================================================================
+   2. ВЕРХНИЙ ИНТРО-БЛОК (ДВЕ КОЛОНКИ)
+   ========================================================================== */
+.detail-intro {
+    display: flex;
+    gap: 40px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(99, 71, 49, 0.04);
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.intro-img-box {
+    width: 45%;
+    height: 280px;
+}
+
+.intro-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.intro-desc-box {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-desc-box p {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #000000;
+    margin: 0 0 15px 0;
+}
+
+.intro-desc-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   3. СЕТКА КАРТОЧЕК СЛУЧАЕВ (2 В РЯД)
+   ========================================================================== */
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 0 15px;
+}
+
+.detail-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+}
+
+.detail-card h3 {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #634731;
+    margin: 0 0 10px 0;
+}
+
+.detail-card p {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000000;
+    margin: 0;
+}
+
+/* ==========================================================================
+   4. СЕТКА ПРОЦЕССА ИССЛЕДОВАНИЯ (3 В РЯД)
+   ========================================================================== */
+.detail-list-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 15px;
+}
+
+.list-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border-top: 4px solid #634731; /* Декоративная линия сверху плитки */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+}
+
+.list-item h4 {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #634731;
+    margin: 0 0 8px 0;
+}
+
+.list-item p {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000000;
+    margin: 0;
+}
+
+/* ==========================================================================
+   5. ПРЕИМУЩЕСТВА (СПИСОК ВНИЗУ)
+   ========================================================================== */
+.advantages-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+    margin: 0 15px;
+}
+
+.advantages-box p {
+    font-family: 'Evolventa', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+    margin: 0 0 12px 0;
+}
+
+.advantages-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   6. ЛОКАЛЬНЫЕ СТИЛИ ДЛЯ КОНТАКТОВ СНИЗУ СТРАНИЦЫ
+   ========================================================================== */
+.detail-contacts {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    max-width: 966px !important;
+    margin: 40px auto 60px auto !important;
+    padding: 0 !important;
+    gap: 40px !important;
+}
+
+.detail-contacts .contacts-info {
+    width: 45% !important;
+    padding-left: 15px !important;
+}
+
+.detail-contacts .contacts-form {
+    width: auto !important;
+}
+
+.detail-contacts .feedback-form {
+    width: 480px !important;
+}
