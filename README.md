@@ -6,7 +6,7 @@ A professional, multilingual website layout for a detective agency with a fully 
 
 -   **Clean Semantic Layout:** Built using modern HTML5, CSS3 grid/flexbox, and vanilla JavaScript.
 -   **Structured Architecture:** Clean and professional separate directory system (`/css`, `/js`, `/images`, `/fonts`).
--   **Smart UX Components:** Customized JS image slider and dynamic phone input masks (`+7 (XXX) XXX-XX-XX`) applied globally across all service pages.
+-   **Smart UX Components:** Customized JS image slider and a dynamic, adaptive phone input mask applied globally across all forms. It automatically detects the country code: formatting RU/CIS numbers with standard brackets (`+7 (XXX) XXX-XX-XX`) and dynamically switching to an open international layout (`+X XXX XXX...`) for foreign numbers while adjusting placeholders on the fly.
 -   **Secure Backend:** Powered by Node.js and Express to handle asynchronous AJAX (`fetch`) form requests.
 -   **Database Automation:** Integrated with PostgreSQL. The backend automatically detects, creates, and verifies the target database and tables upon server startup.
 -   **Security Minded:** Sensitive credentials and system parameters are protected via environment variables (`.env`).
